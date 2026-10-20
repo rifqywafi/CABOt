@@ -1,0 +1,21 @@
+{
+  "name": "cabo-server",
+  "version": "1.0.0",
+  "description": "Socket.IO server for Cabo card game",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "prod": "NODE_ENV=production node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.7.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "keywords": ["socket.io", "card game", "cabo", "multiplayer"],
+  "author": "Cabo Game Developer",
+  "license": "MIT"
+}

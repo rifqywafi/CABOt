@@ -1,0 +1,43 @@
+# Dependencies
+node_modules/
+server/node_modules/
+.pnp
+.pnp.js
+
+# Production and Build Outputs
+.next/
+out/
+build/
+dist/
+.vercel
+.turbo
+
+# Environment Variables (Keep only .env.example)
+.env*
+!.env.example
+
+# Markdown Documentation (Keep only README.md)
+*.md
+!README.md
+server/*.md
+
+# Local Test and Scratch Scripts
+test-*.js
+tests/
+
+# Debug and Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# OS Metadata
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# TypeScript build info
+*.tsbuildinfo
+next-env.d.ts
+

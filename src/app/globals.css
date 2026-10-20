@@ -1,0 +1,78 @@
+/* src/app/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-base: #1a1a1a;
+    --text-base: #c8d1d9;
+  }
+
+  html.theme-inverted {
+    --bg-base: #f4f6f9;
+    --text-base: #1c1c1c;
+  }
+
+  body {
+    background-color: var(--bg-base);
+    color: var(--text-base);
+    transition: background-color 0.25s ease, color 0.25s ease;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+}
+
+/* iOS Safe Area & 100dvh Helper Utilities */
+.safe-pb {
+  padding-bottom: max(0.75rem, env(safe-area-inset-bottom, 0.75rem));
+}
+.safe-pt {
+  padding-top: max(0.5rem, env(safe-area-inset-top, 0.5rem));
+}
+.h-dvh {
+  height: 100dvh;
+}
+.max-h-dvh {
+  max-height: 100dvh;
+}
+
+/* Inverted Theme Classes & Overrides (Warna cerah sebagai warna utama) */
+.theme-inverted {
+  /* Inverted light gradients & background */
+  --cabo-light-bg: #f4f6f9;
+  --cabo-light-surface: #ffffff;
+  --cabo-light-border: #c8d1d9;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #545454;
+  border-radius: 9999px;
+}
+
+.theme-inverted ::-webkit-scrollbar-thumb {
+  background: #c8d1d9;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
